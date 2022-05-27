@@ -1,0 +1,612 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html dir="ltr" lang="en"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="UTF-8"&gt; <br/>
+  &lt;title&gt;Theme Editor&lt;/title&gt; <br/>
+  &lt;base href="https://demo.opencart.com/admin/"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"&gt; <br/>
+  &lt;script type="text/javascript" src="view/javascript/jquery/jquery-2.1.1.min.js"&gt;&lt;/script&gt; <br/>
+  &lt;script type="text/javascript" src="view/javascript/bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt; <br/>
+  &lt;link href="view/stylesheet/bootstrap.css" type="text/css" rel="stylesheet"&gt; <br/>
+  &lt;link href="view/javascript/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet"&gt; <br/>
+  &lt;script src="view/javascript/jquery/datetimepicker/moment/moment.min.js" type="text/javascript"&gt;&lt;/script&gt; <br/>
+  &lt;script src="view/javascript/jquery/datetimepicker/moment/moment-with-locales.min.js" type="text/javascript"&gt;&lt;/script&gt; <br/>
+  &lt;script src="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"&gt;&lt;/script&gt; <br/>
+  &lt;link href="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen"&gt; <br/>
+  &lt;link type="text/css" href="view/stylesheet/stylesheet.css" rel="stylesheet" media="screen"&gt; <br/>
+  &lt;script src="view/javascript/common.js" type="text/javascript"&gt;&lt;/script&gt; <br/>
+ &lt;/head&gt; <br/>
+ &lt;body&gt; <br/>
+  &lt;div id="container"&gt; <br/>
+   &lt;header id="header" class="navbar navbar-static-top"&gt; <br/>
+    &lt;div class="container-fluid"&gt; <br/>
+     &lt;div id="header-logo" class="navbar-header"&gt;<br/>
+      &lt;a href="https://demo.opencart.com/admin/index.php?route=common/dashboard&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP" class="navbar-brand"&gt;&lt;img src="view/image/logo.png" alt="OpenCart" title="OpenCart"&gt;&lt;/a&gt;<br/>
+     &lt;/div&gt; &lt;a href="#" id="button-menu" class="hidden-md hidden-lg"&gt;&lt;span class="fa fa-bars"&gt;&lt;/span&gt;&lt;/a&gt; <br/>
+     &lt;ul class="nav navbar-nav navbar-right"&gt; <br/>
+      &lt;li class="dropdown"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;&lt;img src="https://demo.opencart.com/image/cache/profile-45x45.png" alt="demo demo" title="demo" id="user-profile" class="img-circle"&gt;demo demo &lt;i class="fa fa-caret-down fa-fw"&gt;&lt;/i&gt;&lt;/a&gt; <br/>
+       &lt;ul class="dropdown-menu dropdown-menu-right"&gt; <br/>
+        &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=common/profile&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;&lt;i class="fa fa-user-circle-o fa-fw"&gt;&lt;/i&gt; Your Profile&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li role="separator" class="divider"&gt;&lt;/li&gt; <br/>
+        &lt;li class="dropdown-header"&gt;Stores&lt;/li&gt; <br/>
+        &lt;li&gt;&lt;a href="https://demo.opencart.com/" target="_blank"&gt;Your Store&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li role="separator" class="divider"&gt;&lt;/li&gt; <br/>
+        &lt;li class="dropdown-header"&gt;Help&lt;/li&gt; <br/>
+        &lt;li&gt;&lt;a href="http://www.opencart.com" target="_blank"&gt;&lt;i class="fa fa-opencart fa-fw"&gt;&lt;/i&gt; OpenCart Homepage&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li&gt;&lt;a href="http://docs.opencart.com" target="_blank"&gt;&lt;i class="fa fa-file-text-o fa-fw"&gt;&lt;/i&gt; Documentation&lt;/a&gt;&lt;/li&gt; <br/>
+        &lt;li&gt;&lt;a href="http://forum.opencart.com" target="_blank"&gt;&lt;i class="fa fa-comments-o fa-fw"&gt;&lt;/i&gt; Support Forum&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;/ul&gt; &lt;/li&gt; <br/>
+      &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=common/logout&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;&lt;i class="fa fa-sign-out"&gt;&lt;/i&gt; &lt;span class="hidden-xs hidden-sm hidden-md"&gt;Logout&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; <br/>
+     &lt;/ul&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/header&gt; <br/>
+   &lt;nav id="column-left"&gt; <br/>
+    &lt;div id="navigation"&gt;<br/>
+     &lt;span class="fa fa-bars"&gt;&lt;/span&gt; Navigation<br/>
+    &lt;/div&gt; <br/>
+    &lt;ul id="menu" class="in"&gt; <br/>
+     &lt;li id="menu-dashboard"&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=common/dashboard&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;&lt;i class="fa fa-dashboard fw"&gt;&lt;/i&gt; Dashboard&lt;/a&gt; &lt;/li&gt; <br/>
+     &lt;li id="menu-catalog"&gt;&lt;a href="#collapse1" data-toggle="collapse" class="parent collapsed"&gt;&lt;i class="fa fa-tags fw"&gt;&lt;/i&gt; Catalog&lt;/a&gt; <br/>
+      &lt;ul id="collapse1" class="collapse"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/category&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Categories&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/product&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Products&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/recurring&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Recurring Profiles&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/filter&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Filters&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="#collapse5" data-toggle="collapse" class="parent collapsed"&gt;Attributes&lt;/a&gt; <br/>
+        &lt;ul id="collapse5" class="collapse"&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/attribute&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Attributes&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/attribute_group&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Attribute Groups&lt;/a&gt; &lt;/li&gt; <br/>
+        &lt;/ul&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/option&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Options&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/manufacturer&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Manufacturers&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/download&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Downloads&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/review&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Reviews&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=catalog/information&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Information&lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; &lt;/li&gt; <br/>
+     &lt;li id="menu-extension"&gt;&lt;a href="#collapse14" data-toggle="collapse" class="parent collapsed"&gt;&lt;i class="fa fa-puzzle-piece fw"&gt;&lt;/i&gt; Extensions&lt;/a&gt; <br/>
+      &lt;ul id="collapse14" class="collapse"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=marketplace/marketplace&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Marketplace&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=marketplace/installer&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Installer&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=marketplace/extension&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Extensions&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=marketplace/modification&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Modifications&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=marketplace/event&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Events&lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; &lt;/li&gt; <br/>
+     &lt;li id="menu-design" class="active"&gt;&lt;a href="#collapse20" data-toggle="collapse" class="parent collapsed"&gt;&lt;i class="fa fa-television fw"&gt;&lt;/i&gt; Design&lt;/a&gt; <br/>
+      &lt;ul id="collapse20" class="collapse in"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=design/layout&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Layouts&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li class="active"&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=design/theme&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Theme Editor&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=design/translation&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Language Editor&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=design/banner&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Banners&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=design/seo_url&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;SEO URL&lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; &lt;/li&gt; <br/>
+     &lt;li id="menu-sale"&gt;&lt;a href="#collapse26" data-toggle="collapse" class="parent collapsed"&gt;&lt;i class="fa fa-shopping-cart fw"&gt;&lt;/i&gt; Sales&lt;/a&gt; <br/>
+      &lt;ul id="collapse26" class="collapse"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=sale/order&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Orders&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=sale/recurring&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Recurring Profiles&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=sale/return&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Returns&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="#collapse29" data-toggle="collapse" class="parent collapsed"&gt;Gift Vouchers&lt;/a&gt; <br/>
+        &lt;ul id="collapse29" class="collapse"&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=sale/voucher&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Gift Vouchers&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=sale/voucher_theme&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Voucher Themes&lt;/a&gt; &lt;/li&gt; <br/>
+        &lt;/ul&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; &lt;/li&gt; <br/>
+     &lt;li id="menu-customer"&gt;&lt;a href="#collapse33" data-toggle="collapse" class="parent collapsed"&gt;&lt;i class="fa fa-user fw"&gt;&lt;/i&gt; Customers&lt;/a&gt; <br/>
+      &lt;ul id="collapse33" class="collapse"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=customer/customer&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Customers&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=customer/customer_group&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Customer Groups&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=customer/customer_approval&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Customer Approvals&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=customer/custom_field&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Custom Fields&lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; &lt;/li&gt; <br/>
+     &lt;li id="menu-marketing"&gt;&lt;a href="#collapse38" data-toggle="collapse" class="parent collapsed"&gt;&lt;i class="fa fa-share-alt fw"&gt;&lt;/i&gt; Marketing&lt;/a&gt; <br/>
+      &lt;ul id="collapse38" class="collapse"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=marketing/marketing&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Marketing&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=marketing/coupon&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Coupons&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=marketing/contact&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Mail&lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; &lt;/li&gt; <br/>
+     &lt;li id="menu-system"&gt;&lt;a href="#collapse42" data-toggle="collapse" class="parent collapsed"&gt;&lt;i class="fa fa-cog fw"&gt;&lt;/i&gt; System&lt;/a&gt; <br/>
+      &lt;ul id="collapse42" class="collapse"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=setting/store&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Settings&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="#collapse43" data-toggle="collapse" class="parent collapsed"&gt;Localisation&lt;/a&gt; <br/>
+        &lt;ul id="collapse43" class="collapse"&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/location&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Store Location&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/language&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Languages&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/currency&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Currencies&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/stock_status&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Stock Statuses&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/order_status&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Order Statuses&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="#collapse48" data-toggle="collapse" class="parent collapsed"&gt;Returns&lt;/a&gt; <br/>
+          &lt;ul id="collapse48" class="collapse"&gt; <br/>
+           &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/return_status&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Return Statuses&lt;/a&gt;&lt;/li&gt; <br/>
+           &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/return_action&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Return Actions&lt;/a&gt;&lt;/li&gt; <br/>
+           &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/return_reason&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Return Reasons&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;/ul&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/country&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Countries&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/zone&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Zones&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/geo_zone&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Geo Zones&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="#collapse52" data-toggle="collapse" class="parent collapsed"&gt;Taxes&lt;/a&gt; <br/>
+          &lt;ul id="collapse52" class="collapse"&gt; <br/>
+           &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/tax_class&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Tax Classes&lt;/a&gt;&lt;/li&gt; <br/>
+           &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/tax_rate&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Tax Rates&lt;/a&gt;&lt;/li&gt; <br/>
+          &lt;/ul&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/length_class&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Length Classes&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=localisation/weight_class&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Weight Classes&lt;/a&gt; &lt;/li&gt; <br/>
+        &lt;/ul&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="#collapse56" data-toggle="collapse" class="parent collapsed"&gt;Maintenance&lt;/a&gt; <br/>
+        &lt;ul id="collapse56" class="collapse"&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=tool/backup&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Backup / Restore&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=tool/upload&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Uploads&lt;/a&gt; &lt;/li&gt; <br/>
+         &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=tool/log&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Error Logs&lt;/a&gt; &lt;/li&gt; <br/>
+        &lt;/ul&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; &lt;/li&gt; <br/>
+     &lt;li id="menu-report"&gt;&lt;a href="#collapse61" data-toggle="collapse" class="parent collapsed"&gt;&lt;i class="fa fa-bar-chart-o fw"&gt;&lt;/i&gt; Reports&lt;/a&gt; <br/>
+      &lt;ul id="collapse61" class="collapse"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=report/report&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Reports&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=report/online&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Who's Online&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=report/statistics&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Statistics&lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; &lt;/li&gt; <br/>
+    &lt;/ul&gt; <br/>
+    &lt;div id="stats"&gt; <br/>
+     &lt;ul&gt; <br/>
+      &lt;li&gt; <br/>
+       &lt;div&gt;<br/>
+        Orders Completed &lt;span class="pull-right"&gt;0%&lt;/span&gt;<br/>
+       &lt;/div&gt; <br/>
+       &lt;div class="progress"&gt; <br/>
+        &lt;div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"&gt; &lt;span class="sr-only"&gt;0%&lt;/span&gt;<br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; &lt;/li&gt; <br/>
+      &lt;li&gt; <br/>
+       &lt;div&gt;<br/>
+        Orders Processing &lt;span class="pull-right"&gt;0%&lt;/span&gt;<br/>
+       &lt;/div&gt; <br/>
+       &lt;div class="progress"&gt; <br/>
+        &lt;div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"&gt; &lt;span class="sr-only"&gt;0%&lt;/span&gt;<br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; &lt;/li&gt; <br/>
+      &lt;li&gt; <br/>
+       &lt;div&gt;<br/>
+        Other Statuses &lt;span class="pull-right"&gt;0%&lt;/span&gt;<br/>
+       &lt;/div&gt; <br/>
+       &lt;div class="progress"&gt; <br/>
+        &lt;div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"&gt; &lt;span class="sr-only"&gt;0%&lt;/span&gt;<br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; &lt;/li&gt; <br/>
+     &lt;/ul&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/nav&gt; <br/>
+   &lt;div id="content"&gt; <br/>
+    &lt;div class="page-header"&gt; <br/>
+     &lt;div class="container-fluid"&gt; <br/>
+      &lt;h1&gt;Theme Editor&lt;/h1&gt; <br/>
+      &lt;ul class="breadcrumb"&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=common/dashboard&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Home&lt;/a&gt;&lt;/li&gt; <br/>
+       &lt;li&gt;&lt;a href="https://demo.opencart.com/admin/index.php?route=design/theme&amp;user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP"&gt;Theme Editor&lt;/a&gt;&lt;/li&gt; <br/>
+      &lt;/ul&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+    &lt;div class="container-fluid"&gt; <br/>
+     &lt;div class="panel panel-default"&gt; <br/>
+      &lt;div class="panel-heading"&gt; <br/>
+       &lt;h3 class="panel-title"&gt;&lt;i class="fa fa-list"&gt;&lt;/i&gt; Edit Theme&lt;/h3&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="panel-body"&gt; <br/>
+       &lt;div class="row"&gt; <br/>
+        &lt;div class="col-lg-3 col-md-3 col-sm-12"&gt; <br/>
+         &lt;div class="list-group"&gt; <br/>
+          &lt;div class="list-group-item"&gt; <br/>
+           &lt;h4 class="list-group-item-heading"&gt;Choose your store&lt;/h4&gt; <br/>
+          &lt;/div&gt; <br/>
+          &lt;div class="list-group-item"&gt; &lt;select name="store_id" class="form-control"&gt; &lt;option value="0"&gt;Default&lt;/option&gt; &lt;/select&gt; <br/>
+          &lt;/div&gt; <br/>
+         &lt;/div&gt; <br/>
+         &lt;div class="list-group"&gt; <br/>
+          &lt;div class="list-group-item"&gt; <br/>
+           &lt;h4 class="list-group-item-heading"&gt;Choose a template&lt;/h4&gt; <br/>
+          &lt;/div&gt; <br/>
+          &lt;div id="path"&gt;<br/>
+           &lt;a href="account" class="list-group-item directory"&gt;account &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="affiliate" class="list-group-item directory"&gt;affiliate &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="checkout" class="list-group-item directory"&gt;checkout &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="common" class="list-group-item directory"&gt;common &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="error" class="list-group-item directory"&gt;error &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="extension" class="list-group-item directory"&gt;extension &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="information" class="list-group-item directory"&gt;information &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="mail" class="list-group-item directory"&gt;mail &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href="product" class="list-group-item directory"&gt;product &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;<br/>
+          &lt;/div&gt; <br/>
+         &lt;/div&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="col-lg-9 col-md-9 col-sm-12"&gt; <br/>
+         &lt;div class="alert alert-info"&gt;<br/>
+          &lt;i class="fa fa-info-circle"&gt;&lt;/i&gt; The theme editor uses the template language Twig. You can read about &lt;a href="http://twig.sensiolabs.org/documentation" target="_blank" class="alert-link"&gt;Twig syntax here&lt;/a&gt;.<br/>
+         &lt;/div&gt; <br/>
+         &lt;div id="recent"&gt; <br/>
+          &lt;fieldset&gt; &lt;legend&gt;Theme History&lt;/legend&gt; <br/>
+           &lt;div id="history"&gt;<br/>
+            &lt;div class="table-responsive"&gt; <br/>
+             &lt;table class="table table-bordered"&gt; <br/>
+              &lt;thead&gt; <br/>
+               &lt;tr&gt; <br/>
+                &lt;td class="text-left"&gt;Store&lt;/td&gt; <br/>
+                &lt;td class="text-left"&gt;Route&lt;/td&gt; <br/>
+                &lt;td class="text-left"&gt;Theme&lt;/td&gt; <br/>
+                &lt;td class="text-left"&gt;Date Added&lt;/td&gt; <br/>
+                &lt;td class="text-right"&gt;Action&lt;/td&gt; <br/>
+               &lt;/tr&gt; <br/>
+              &lt;/thead&gt; <br/>
+              &lt;tbody&gt; <br/>
+               &lt;tr&gt; <br/>
+                &lt;td class="text-center" colspan="5"&gt;No results!&lt;/td&gt; <br/>
+               &lt;/tr&gt; <br/>
+              &lt;/tbody&gt; <br/>
+             &lt;/table&gt; <br/>
+            &lt;/div&gt; <br/>
+            &lt;div class="row"&gt; <br/>
+             &lt;div class="col-sm-6 text-left"&gt;&lt;/div&gt; <br/>
+             &lt;div class="col-sm-6 text-right"&gt;<br/>
+              Showing 0 to 0 of 0 (0 Pages)<br/>
+             &lt;/div&gt; <br/>
+            &lt;/div&gt; <br/>
+           &lt;/div&gt; <br/>
+          &lt;/fieldset&gt; <br/>
+         &lt;/div&gt; <br/>
+         &lt;div id="code" style="display: none;"&gt; <br/>
+          &lt;ul class="nav nav-tabs"&gt; <br/>
+          &lt;/ul&gt; <br/>
+          &lt;div class="tab-content"&gt;&lt;/div&gt; <br/>
+         &lt;/div&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+    &lt;link href="view/javascript/codemirror/lib/codemirror.css" rel="stylesheet"&gt; <br/>
+    &lt;link href="view/javascript/codemirror/theme/monokai.css" rel="stylesheet"&gt; <br/>
+    &lt;script type="text/javascript" src="view/javascript/codemirror/lib/codemirror.js"&gt;&lt;/script&gt; <br/>
+    &lt;script type="text/javascript" src="view/javascript/codemirror/lib/xml.js"&gt;&lt;/script&gt; <br/>
+    &lt;script type="text/javascript" src="view/javascript/codemirror/lib/formatting.js"&gt;&lt;/script&gt; <br/>
+    &lt;script type="text/javascript"&gt;&lt;!--<br/>
+$('select[name="store_id"]').on('change', function(e) {<br/>
+	$.ajax({<br/>
+		url: 'index.php?route=design/theme/path&user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP&store_id=' + $('select[name="store_id"]').val(),<br/>
+		dataType: 'json',<br/>
+		beforeSend: function() {<br/>
+			$('select[name="store_id"]').prop('disabled', true);<br/>
+		},<br/>
+		complete: function() {<br/>
+			$('select[name="store_id"]').prop('disabled', false);<br/>
+		},<br/>
+		success: function(json) {<br/>
+			html = '';<br/>
+<br/>
+			if (json['directory']) {<br/>
+				for (i = 0; i &lt; json['directory'].length; i++) {<br/>
+					html += '&lt;a href="' + json['directory'][i]['path'] + '" class="list-group-item directory"&gt;' + json['directory'][i]['name'] + ' &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;';<br/>
+				}<br/>
+			}<br/>
+<br/>
+			if (json['file']) {<br/>
+				for (i = 0; i &lt; json['file'].length; i++) {<br/>
+					html += '&lt;a href="' + json['file'][i]['path'] + '" class="list-group-item file"&gt;' + json['file'][i]['name'] + ' &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;';<br/>
+				}<br/>
+			}<br/>
+<br/>
+			$('#path').html(html);<br/>
+		},<br/>
+		error: function(xhr, ajaxOptions, thrownError) {<br/>
+			alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);<br/>
+		}<br/>
+	});<br/>
+});<br/>
+<br/>
+$('select[name="store_id"]').trigger('change');<br/>
+<br/>
+$('#path').on('click', 'a.directory', function(e) {<br/>
+	console.log($(node).attr('href'));<br/>
+	<br/>
+	e.preventDefault();<br/>
+<br/>
+	var node = this;<br/>
+	<br/>
+	$.ajax({<br/>
+		url: 'index.php?route=design/theme/path&user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP&store_id=' + $('select[name="store_id"]').val() + '&path=' + $(node).attr('href'),<br/>
+		dataType: 'json',<br/>
+		beforeSend: function() {<br/>
+			$(node).find('i').removeClass('fa-arrow-right');<br/>
+			$(node).find('i').addClass('fa-circle-o-notch fa-spin');<br/>
+		},<br/>
+		complete: function() {<br/>
+			$(node).find('i').removeClass('fa-circle-o-notch fa-spin');<br/>
+			$(node).find('i').addClass('fa-arrow-right');<br/>
+		},<br/>
+		success: function(json) {<br/>
+			html = '';<br/>
+<br/>
+			if (json['directory']) {<br/>
+				for (i = 0; i &lt; json['directory'].length; i++) {<br/>
+					html += '&lt;a href="' + json['directory'][i]['path'] + '" class="list-group-item directory"&gt;' + json['directory'][i]['name'] + ' &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;';<br/>
+				}<br/>
+			}<br/>
+<br/>
+			if (json['file']) {<br/>
+				for (i = 0; i &lt; json['file'].length; i++) {<br/>
+					html += '&lt;a href="' + json['file'][i]['path'] + '" class="list-group-item file"&gt;' + json['file'][i]['name'] + ' &lt;i class="fa fa-arrow-right fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;';<br/>
+				}<br/>
+			}<br/>
+<br/>
+			if (json['back']) {<br/>
+				html += '&lt;a href="' + json['back']['path'] + '" class="list-group-item directory"&gt;' + json['back']['name'] + ' &lt;i class="fa fa-arrow-left fa-fw pull-right"&gt;&lt;/i&gt;&lt;/a&gt;';<br/>
+			}<br/>
+<br/>
+			$('#path').html(html);<br/>
+		},<br/>
+		error: function(xhr, ajaxOptions, thrownError) {<br/>
+			alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);<br/>
+		}<br/>
+	});<br/>
+});<br/>
+<br/>
+$('#path').on('click', 'a.file', function(e) {<br/>
+	e.preventDefault();<br/>
+<br/>
+	var node = this;<br/>
+	<br/>
+	// Check if the file has an extension<br/>
+	var pos = $(node).attr('href').lastIndexOf('.');<br/>
+<br/>
+	if (pos != -1) {<br/>
+		var tab_id = $('select[name="store_id"]').val() + '-' + $(node).attr('href').slice(0, pos).replace(/\//g, '-').replace(/_/g, '-');<br/>
+	} else {<br/>
+		var tab_id = $('select[name="store_id"]').val() + '-' + $(node).attr('href').replace(/\//g, '-').replace(/_/g, '-');<br/>
+	}<br/>
+	<br/>
+	if (!$('#tab-' + tab_id).length) {<br/>
+		$.ajax({<br/>
+			url: 'index.php?route=design/theme/template&user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP&store_id=' + $('select[name="store_id"]').val() + '&path=' + $(node).attr('href'),<br/>
+			dataType: 'json',<br/>
+			beforeSend: function() {<br/>
+				$(node).find('i').removeClass('fa-arrow-right');<br/>
+				$(node).find('i').addClass('fa-circle-o-notch fa-spin');<br/>
+			},<br/>
+			complete: function() {<br/>
+				$(node).find('i').removeClass('fa-circle-o-notch fa-spin');<br/>
+				$(node).find('i').addClass('fa-arrow-right');<br/>
+			},<br/>
+			success: function(json) {<br/>
+				if (json['code']) {<br/>
+					$('#code').show();<br/>
+					$('#recent').hide();<br/>
+<br/>
+					$('.nav-tabs').append('&lt;li&gt;&lt;a href="#tab-' + tab_id + '" data-toggle="tab"&gt;' + $(node).attr('href').split('/').join(' / ') + '&nbsp;&nbsp;&lt;i class="fa fa-minus-circle"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;');<br/>
+<br/>
+					html  = '&lt;div class="tab-pane" id="tab-' + tab_id + '"&gt;';<br/>
+					html += '  &lt;textarea name="code" rows="10"&gt;&lt;/textarea&gt;';<br/>
+					html += '  &lt;input type="hidden" name="store_id" value="' + $('select[name="store_id"]').val() + '" /&gt;';<br/>
+					html += '  &lt;input type="hidden" name="path" value="' + $(node).attr('href') + '" /&gt;';<br/>
+					html += '  &lt;br /&gt;';<br/>
+					html += '  &lt;div class="pull-right"&gt;';<br/>
+					html += '    &lt;button type="button" data-loading-text="Loading..." class="btn btn-primary"&gt;&lt;i class="fa fa-floppy-o"&gt;&lt;/i&gt; Save&lt;/button&gt;';<br/>
+					html += '    &lt;button data-loading-text="Loading..." class="btn btn-danger"&gt;&lt;i class="fa fa-recycle"&gt;&lt;/i&gt; Reset&lt;/button&gt;';<br/>
+					html += '  &lt;/div&gt;';<br/>
+					html += '&lt;/div&gt;';<br/>
+<br/>
+					$('.tab-content').append(html);<br/>
+<br/>
+					$('.nav-tabs a[href=\'#tab-' + tab_id + '\']').tab('show');<br/>
+					<br/>
+					// Initialize codemirrror<br/>
+					var codemirror = CodeMirror.fromTextArea(document.querySelector('.tab-content .active textarea'), {<br/>
+						mode: 'text/html',<br/>
+						height: '500px',<br/>
+						lineNumbers: true,<br/>
+						autofocus: true,<br/>
+						theme: 'monokai'<br/>
+					});<br/>
+<br/>
+					codemirror.setValue(json['code']);<br/>
+				}<br/>
+			},<br/>
+			error: function(xhr, ajaxOptions, thrownError) {<br/>
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);<br/>
+			}<br/>
+		});<br/>
+	} else {<br/>
+		$('.nav-tabs a[href=\'#tab-' + tab_id + '\']').tab('show');<br/>
+	}<br/>
+});<br/>
+<br/>
+$('.nav-tabs').on('click', 'i.fa-minus-circle', function(e) {<br/>
+	e.preventDefault();<br/>
+<br/>
+	if ($(this).parent().parent().is('li.active')) {<br/>
+		index = $(this).parent().parent().index();<br/>
+<br/>
+		if (index == 0) {<br/>
+			$(this).parent().parent().parent().find('li').eq(index + 1).find('a').tab('show');<br/>
+		} else {<br/>
+			$(this).parent().parent().parent().find('li').eq(index - 1).find('a').tab('show');<br/>
+		}<br/>
+	}<br/>
+<br/>
+	$(this).parent().parent().remove();<br/>
+<br/>
+	$($(this).parent().attr('href')).remove();<br/>
+<br/>
+	if (!$('#code &gt; ul &gt; li').length) {<br/>
+		$('#code').hide();<br/>
+		$('#recent').show();<br/>
+	}<br/>
+});<br/>
+<br/>
+$('.tab-content').on('click', '.btn-primary', function(e) {<br/>
+	var node = this;<br/>
+<br/>
+	var editor = $('.tab-content .active .CodeMirror')[0].CodeMirror;<br/>
+				<br/>
+	$.ajax({<br/>
+		url: 'index.php?route=design/theme/save&user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP&store_id=' + $('.tab-content .active input[name="store_id"]').val() + '&path=' + $('.tab-content .active input[name="path"]').val(),<br/>
+		type: 'post',<br/>
+		data: 'code=' + encodeURIComponent(editor.getValue()),<br/>
+		dataType: 'json',<br/>
+		beforeSend: function() {<br/>
+			$(node).button('loading');<br/>
+		},<br/>
+		complete: function() {<br/>
+			$(node).button('reset');<br/>
+		},<br/>
+		success: function(json) {<br/>
+			$('.alert-dismissible').remove();<br/>
+			<br/>
+			if (json['error']) {<br/>
+				$('#content &gt; .container-fluid').prepend('&lt;div class="alert alert-danger alert-dismissible"&gt;&lt;i class="fa fa-exclamation-circle"&gt;&lt;/i&gt; ' + json['error'] + '  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;&lt;/div&gt;');<br/>
+			}<br/>
+<br/>
+			if (json['success']) {<br/>
+				$('#content &gt; .container-fluid').prepend('&lt;div class="alert alert-success alert-dismissible"&gt;&lt;i class="fa fa-exclamation-circle"&gt;&lt;/i&gt; ' + json['success'] + '  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;&lt;/div&gt;');<br/>
+			<br/>
+				$('#history').load('index.php?route=design/theme/history&user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP');<br/>
+			}<br/>
+		},<br/>
+		error: function(xhr, ajaxOptions, thrownError) {<br/>
+			alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);<br/>
+		}<br/>
+	});<br/>
+});<br/>
+<br/>
+$('.tab-content').on('click', '.btn-danger', function(e) {<br/>
+	if (confirm('Are you sure?')) {<br/>
+		var node = this;<br/>
+<br/>
+		$.ajax({<br/>
+			url: 'index.php?route=design/theme/reset&user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP&store_id=' + $('.tab-content .active input[name="store_id"]').val() + '&path=' + $('.tab-content .active input[name="path"]').val(),<br/>
+			dataType: 'json',<br/>
+			beforeSend: function() {<br/>
+				$(node).button('loading');<br/>
+			},<br/>
+			complete: function() {<br/>
+				$(node).button('reset');<br/>
+			},<br/>
+			success: function(json) {<br/>
+				$('.alert-dismissible').remove();<br/>
+				<br/>
+				if (json['error']) {<br/>
+					$('#content &gt; .container-fluid').prepend('&lt;div class="alert alert-danger alert-dismissible"&gt;&lt;i class="fa fa-exclamation-circle"&gt;&lt;/i&gt; ' + json['error'] + '  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;&lt;/div&gt;');<br/>
+				}<br/>
+<br/>
+				if (json['success']) {<br/>
+					$('#content &gt; .container-fluid').prepend('&lt;div class="alert alert-success alert-dismissible"&gt;&lt;i class="fa fa-exclamation-circle"&gt;&lt;/i&gt; ' + json['success'] + '  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;&lt;/div&gt;');<br/>
+				}<br/>
+				<br/>
+				var codemirror = $('.tab-content .active .CodeMirror')[0].CodeMirror;<br/>
+				<br/>
+				codemirror.setValue(json['code']);<br/>
+			},<br/>
+			error: function(xhr, ajaxOptions, thrownError) {<br/>
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);<br/>
+			}<br/>
+		});<br/>
+	}<br/>
+});<br/>
+<br/>
+$('#history').delegate('.pagination a', 'click', function(e) {<br/>
+	e.preventDefault();<br/>
+<br/>
+	$('#history').load(this.href);<br/>
+});<br/>
+<br/>
+$('#history').load('index.php?route=design/theme/history&user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP');<br/>
+<br/>
+$('#history').on('click', '.btn-primary', function(e) {<br/>
+	e.preventDefault();<br/>
+<br/>
+	var node = this;<br/>
+	<br/>
+	// Check if the file has an extension<br/>
+	var tab_id = $(node).parent().parent().find('input[name="store_id"]').val() + '-' + $(node).parent().parent().find('input[name="path"]').val().replace(/\//g, '-').replace(/_/g, '-');<br/>
+<br/>
+	if (!$('#tab-' + tab_id).length) {<br/>
+		$.ajax({<br/>
+			url: 'index.php?route=design/theme/template&user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP&store_id=' + $(node).parent().parent().find('input[name="store_id"]').val() + '&path=' + $(node).parent().parent().find('input[name="path"]').val(),<br/>
+			dataType: 'json',<br/>
+			beforeSend: function() {<br/>
+				$(node).button('loading');<br/>
+			},<br/>
+			complete: function() {<br/>
+				$(node).button('reset');<br/>
+			},<br/>
+			success: function(json) {<br/>
+				if (json['code']) {<br/>
+					$('#code').show();<br/>
+					$('#recent').hide();<br/>
+<br/>
+					$('.nav-tabs').append('&lt;li&gt;&lt;a href="#tab-' + tab_id + '" data-toggle="tab"&gt;' + $(node).parent().parent().find('input[name="path"]').val().split('/').join(' / ') + '&nbsp;&nbsp;&lt;i class="fa fa-minus-circle"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;');<br/>
+<br/>
+					html  = '&lt;div class="tab-pane" id="tab-' + tab_id + '"&gt;';<br/>
+					html += '  &lt;textarea name="code" rows="10"&gt;&lt;/textarea&gt;';<br/>
+					html += '  &lt;input type="hidden" name="store_id" value="' + $(node).parent().parent().find('input[name="store_id"]').val() + '" /&gt;';<br/>
+					html += '  &lt;input type="hidden" name="path" value="' + $(node).parent().parent().find('input[name="path"]').val() + '.twig" /&gt;';<br/>
+					html += '  &lt;br /&gt;';<br/>
+					html += '  &lt;div class="pull-right"&gt;';<br/>
+					html += '    &lt;button type="button" data-loading-text="Loading..." class="btn btn-primary"&gt;&lt;i class="fa fa-floppy-o"&gt;&lt;/i&gt; Save&lt;/button&gt;';<br/>
+					html += '    &lt;button data-loading-text="Loading..." class="btn btn-danger"&gt;&lt;i class="fa fa-recycle"&gt;&lt;/i&gt; Reset&lt;/button&gt;';<br/>
+					html += '  &lt;/div&gt;';<br/>
+					html += '&lt;/div&gt;';<br/>
+<br/>
+					$('.tab-content').append(html);<br/>
+<br/>
+					$('.nav-tabs a[href=\'#tab-' + tab_id + '\']').tab('show');<br/>
+					<br/>
+					// Initialize codemirrror<br/>
+					var codemirror = CodeMirror.fromTextArea(document.querySelector('.tab-content .active textarea'), {<br/>
+						mode: 'text/html',<br/>
+						height: '500px',<br/>
+						lineNumbers: true,<br/>
+						autofocus: true,<br/>
+						theme: 'monokai'<br/>
+					});<br/>
+<br/>
+					codemirror.setValue(json['code']);<br/>
+				}<br/>
+			},<br/>
+			error: function(xhr, ajaxOptions, thrownError) {<br/>
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);<br/>
+			}<br/>
+		});<br/>
+	} else {<br/>
+		$('.nav-tabs a[href=\'#tab-' + tab_id + '\']').tab('show');<br/>
+	}<br/>
+});<br/>
+<br/>
+$('#history').on('click', '.btn-danger', function(e) {<br/>
+	e.preventDefault();<br/>
+	<br/>
+	if (confirm('Are you sure?')) {<br/>
+		var node = this;<br/>
+<br/>
+		$.ajax({<br/>
+			url: $(node).attr('href'),<br/>
+			dataType: 'json',<br/>
+			beforeSend: function() {<br/>
+				$(node).button('loading');<br/>
+			},<br/>
+			complete: function() {<br/>
+				$(node).button('reset');<br/>
+			},<br/>
+			success: function(json) {<br/>
+				$('.alert-dismissible').remove();<br/>
+				<br/>
+				if (json['error']) {<br/>
+					$('#history').before('&lt;div class="alert alert-danger alert-dismissible"&gt;&lt;i class="fa fa-exclamation-circle"&gt;&lt;/i&gt; ' + json['error'] + ' &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;&lt;/div&gt;');<br/>
+				}<br/>
+<br/>
+				if (json['success']) {<br/>
+					$('#history').before('&lt;div class="alert alert-success alert-dismissible"&gt;&lt;i class="fa fa-exclamation-circle"&gt;&lt;/i&gt; ' + json['success'] + ' &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;&lt;/div&gt;');<br/>
+				<br/>
+					$('#history').load('index.php?route=design/theme/history&user_token=YrlQoTL78am7WOFWk3wvIqfqF00EcuJP');<br/>
+				}<br/>
+			},<br/>
+			error: function(xhr, ajaxOptions, thrownError) {<br/>
+				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);<br/>
+			}<br/>
+		});<br/>
+	}<br/>
+});<br/>
+//--&gt;&lt;/script&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;footer id="footer"&gt;<br/>
+    &lt;a href="http://www.opencart.com"&gt;OpenCart&lt;/a&gt; © 2009-2022 All Rights Reserved.<br/>
+    &lt;br&gt;Version 3.0.1.1<br/>
+   &lt;/footer&gt;<br/>
+  &lt;/div&gt; <br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
